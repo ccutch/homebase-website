@@ -2,6 +2,7 @@ package pages
 
 import (
 	html "html/template"
+	"log"
 	"net/http"
 
 	"github.com/gobuffalo/packr"
@@ -16,8 +17,10 @@ func init() {
 	baseTemplate.Funcs(funcs)
 
 	box := packr.NewBox("../partials")
+	log.Println(box.List())
 	for _, f := range box.List() {
-		baseTemplate.Parse(box.String(f))
+		s := box.String(f)
+		baseTemplate.Parse(s)
 	}
 
 	//baseTemplate.ParseGlob("partials/*.tmpl")
@@ -37,8 +40,16 @@ type Page struct {
 // a template
 func (p Page) ServeHTTP(w http.ResponseWriter, r *http.Request) {
 	t := html.Must(baseTemplate.Clone())
+
+	pbox := packr.NewBox("../partials")
+	for _, f := range pbox.List() {
+		s := pbox.String(f)
+		t.Parse(s)
+	}
+
 	box := packr.NewBox("../pages")
-	html.Must(t.Parse(box.String(p.Template)))
+	s := box.String(p.Template)
+	html.Must(t.Parse(s))
 
 	if p.Params == nil {
 		t.Execute(w, nil)
