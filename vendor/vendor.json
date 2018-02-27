@@ -1,0 +1,19 @@
+{
+	"comment": "",
+	"ignore": "test",
+	"package": [
+		{
+			"checksumSHA1": "D4efAdpmy4cFYgI/sHnvgYi3O/I=",
+			"path": "github.com/gobuffalo/packr",
+			"revision": "6434a292ac52e6964adebfdce3f9ce6d9f16be01",
+			"revisionTime": "2018-02-15T23:17:14Z"
+		},
+		{
+			"checksumSHA1": "ljd3FhYRJ91cLZz3wsH9BQQ2JbA=",
+			"path": "github.com/pkg/errors",
+			"revision": "30136e27e2ac8d167177e8a583aa4c3fea5be833",
+			"revisionTime": "2018-01-27T01:58:12Z"
+		}
+	],
+	"rootPath": "github.com/ccutch/homebase-website"
+}
