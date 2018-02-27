@@ -1,0 +1,16 @@
+<!-- homebase.html -->
+<!-- Html template for homepage referenced in homepage Page struct
+     instance. These files can be anywhere in the project but should
+     be collocated with file where Page struct is defined. -->
+
+<!-- Calling function to get user -->
+{{ $user := getUser }}
+
+<!-- Because we are passing a string as data we can just inpolate
+     it with a dot -->
+<title>{{.}}</title>
+<link rel="stylesheet" href="/static/global-styles.css">
+
+{{template "header" $user}}
+<h1>Welcome {{$user.Name}} to {{.}}</h1>
+<!--<image src="https://www.w3schools.com/howto/img_fjords.jpg">-->
