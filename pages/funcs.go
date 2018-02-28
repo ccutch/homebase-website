@@ -1,6 +1,8 @@
 package pages
 
-import html "html/template"
+import (
+	html "html/template"
+)
 
 type User struct {
 	Name string
