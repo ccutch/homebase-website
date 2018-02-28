@@ -11,6 +11,8 @@ import (
 
 // Finally setup and run the server using go's http basic package
 func main() {
+	pages.LoadPartials()
+
 	fs := http.FileServer(packr.NewBox("./static"))
 	http.Handle("/static/", http.StripPrefix("/static/", fs))
 	http.Handle("/", pages.Homepage)
