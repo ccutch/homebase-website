@@ -3,6 +3,12 @@
 	"ignore": "test",
 	"package": [
 		{
+			"checksumSHA1": "pYLmArxDSXl6nX7pDPuzeWA10i8=",
+			"path": "github.com/ccutch/goparcel",
+			"revision": "ebb0500c00f2c87a50f5d9026314a974b8f2c485",
+			"revisionTime": "2018-02-28T23:21:22Z"
+		},
+		{
 			"checksumSHA1": "D4efAdpmy4cFYgI/sHnvgYi3O/I=",
 			"path": "github.com/gobuffalo/packr",
 			"revision": "6434a292ac52e6964adebfdce3f9ce6d9f16be01",
