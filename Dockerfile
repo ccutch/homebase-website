@@ -10,4 +10,7 @@ RUN packr build -o app
 FROM alpine
 WORKDIR /app
 COPY --from=build-env /go/src/github.com/ccutch/homebase-website/app /app/
+COPY ./frontend /app/frontend
+RUN apk add --update nodejs
+
 ENTRYPOINT ./app
